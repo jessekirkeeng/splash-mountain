@@ -1,11 +1,10 @@
 import React from 'react';
 import { Route, Routes} from 'react-router-dom';
-import User from './components/User/User';
-import Login from './components/Login/Login';
+import Login from './components/Login/Login.ts'
 
 export default (
 	<Routes>
-		<Route element={<User />} path='/' />
-		<Route element={<Login />} path='/login' />
+		<Route element={<Login title='Hello World'/>} path='/' />
+
 	</Routes>
-)
+);

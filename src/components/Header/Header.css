@@ -1,0 +1,197 @@
+nav {
+  border-bottom: 2px solid black;
+  height: 11vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.5%;
+  background-color: #385a7785;
+}
+nav button {
+  height: 7.5vh;
+  width: 7vw;
+  background-color: #7e7e7ea8;
+  color: white;
+  border-radius: 12%;
+  cursor: pointer;
+  border: 2px solid black;
+  font-size: 1.2em;
+}
+nav button:hover {
+  background-color: #8b8b8b;
+}
+nav button:active {
+  background-color: #385a7785;
+}
+nav h1 {
+  position: absolute;
+  right: 7%;
+}
+
+.nav-buttons {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 18vw;
+}
+
+.user-icon {
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  right: 2%;
+  top: 4%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 16vw;
+  position: relative;
+  left: 9%;
+}
+.user-info .list-toggle {
+  height: 4vh;
+  width: 5vw;
+  font-size: 0.75em;
+}
+
+.studio-logo {
+  height: 90px;
+  width: 200px;
+  position: absolute;
+  left: 2%;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: sticky;
+    top: 0;
+    height: 90px;
+  }
+  nav button {
+    height: 7.5vh;
+    width: 10vw;
+    font-size: 1em;
+  }
+
+  .nav-buttons {
+    width: 55vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20vw;
+  }
+
+  .user-icon {
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    right: 2%;
+    top: 20%;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 15vw;
+    position: relative;
+    left: -15%;
+    font-size: 0.65em;
+  }
+  .user-info h2 {
+    display: none;
+  }
+  .user-info .list-toggle {
+    height: 6vh;
+    width: 9vw;
+    font-size: 1.2em;
+  }
+
+  .studio-logo {
+    height: 60px;
+    width: 20vw;
+    position: absolute;
+    left: 1%;
+  }
+}
+@media (max-width: 480px) {
+  nav .full-menu {
+    display: none;
+  }
+  nav .mobile-menu {
+    display: inline-block;
+  }
+  nav .mobile-menu-button {
+    display: block;
+    position: absolute;
+    left: 3%;
+    height: 65px;
+    width: 14vw;
+  }
+  nav button {
+    width: 45vw;
+    height: 12vh;
+    background-color: #5d7285;
+    border-radius: 0;
+  }
+  nav .nav-buttons {
+    margin: 0 auto;
+    flex-direction: column;
+    position: relative;
+    top: 36vh;
+    right: 35%;
+    height: auto;
+    width: auto;
+    justify-content: space-evenly;
+    animation: fadeIn linear 250ms;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .user-info {
+    position: absolute;
+    left: 66%;
+    top: 25%;
+  }
+  .user-info h2 {
+    display: none;
+  }
+  .user-info .list-toggle {
+    height: 45px;
+    width: 18vw;
+    border-radius: 12%;
+    background-color: #7e7e7ea8;
+  }
+
+  .user-icon {
+    top: 25%;
+    height: 45px;
+    width: 13vw;
+  }
+
+  .studio-logo {
+    height: 60px;
+    width: 30vw;
+    position: absolute;
+    left: 20%;
+  }
+}
