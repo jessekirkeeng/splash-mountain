@@ -2,7 +2,8 @@
 import React from 'react';
 import './App.css';
 import routes from './routes';
-import Header from '../src/components/Header/Header'
+import Header from '../src/components/Header/Header';
+
 
 function App() {
   return (

@@ -6,7 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import UserProvider from './components/Context/Context';
-import store from '../src/ducks/store'
+import store from '../src/ducks/store';
+
 
 ReactDOM.render(
 <React.StrictMode>

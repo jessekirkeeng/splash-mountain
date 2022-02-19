@@ -4,10 +4,11 @@ const express = require("express");
 const session = require("express-session");
 const app = express();
 app.use(express.json());
+const  Web3  = require('web3');
 
-const {
-	removeUsername
-} = require('./controller/operator')
+console.log(Web3)
+
+const web3 = new Web3(Web3.givenProvider || "http://localhost:8545");
 
 const { SESSION_SECRET, PORT, CONNECTION_STRING } = process.env;
 
@@ -28,6 +29,10 @@ massive({
 	console.log("db connected");
 }).catch(err => console.log(err));
 
+
+const {
+	removeUsername
+} = require('./controller/operator');
 
 app.put("/api/auth/remove/:id", removeUsername);
 
