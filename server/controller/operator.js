@@ -1,13 +1,11 @@
 module.exports = {
-	removeUsername: (req, res) => {
-		const { id } = req.params;
-  const db = req.app.get("db");
-
-  try {
-    db.user.set_username(id);
-    res.sendStatus(200);
-  } catch (err) {
-    console.log(err);
-  };
-	},
-}
+  webData: async (req, res) => {
+	try{
+		const web3 = new Web3(Web3.givenProvider || "http://localhost:3131");
+		const network = await web3.eth.net.getNetworkType();
+		const accountNumber = await web3.eth.getAccounts()
+		// .then(({data}) => setAccount(data))
+		// console.log('account:', accountNumber[0])		
+} catch (err) {
+	console.log(err)}
+}}

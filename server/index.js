@@ -4,11 +4,14 @@ const express = require("express");
 const session = require("express-session");
 const app = express();
 app.use(express.json());
+
 const  Web3  = require('web3');
 
-console.log(Web3)
+const meta = async ()=> {
+	const web3 = new Web3(Web3.givenProvider || "http://localhost:3131");
+	const network = await web3.eth.net.getNetworkType()
 
-const web3 = new Web3(Web3.givenProvider || "http://localhost:8545");
+}
 
 const { SESSION_SECRET, PORT, CONNECTION_STRING } = process.env;
 
@@ -30,11 +33,11 @@ massive({
 }).catch(err => console.log(err));
 
 
-const {
-	removeUsername
-} = require('./controller/operator');
+// const {
+// 	removeUsername
+// } = require('./controller/operator');
 
-app.put("/api/auth/remove/:id", removeUsername);
+// app.put("/api/auth/remove/:id", removeUsername);
 
 const port = PORT || 3131;
 
